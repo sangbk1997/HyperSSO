@@ -180,7 +180,7 @@ task createKeystore (group: "build", description: "Create CAS keystore") {
     doFirst {
         mkdir "/etc/cas"
 
-        def keystorePath = "/etc/cas/thekeystore"
+        def keystorePath = "classPath/etc/cas/thekeystore"
 
         def dn = "CN=cas.example.org,OU=Example,OU=Org,C=US"
         if (project.hasProperty("certificateDn")) {

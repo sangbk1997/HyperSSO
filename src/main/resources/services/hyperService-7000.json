@@ -1,0 +1,11 @@
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "id": 7000,
+  "serviceId": "https://chat.hyper.com:9999/cas/validate",
+  "name": "Hyperlogy SSO",
+  "description": "Hyperlogy Corporation is IT Solutions for Business & Public Sector in Viet Nam",
+  "anonymousAccess":false,
+  "attributeReleasePolicy" : {
+    "@class" : "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "id": 9797,
+  "serviceId": "http://sso.client.com:9797/login/cas",
+  "name": "Hyperlogy SSO",
+  "description": "Hyperlogy Corporation is IT Solutions for Business & Public Sector in Viet Nam",
+  "anonymousAccess":false,
+  "attributeReleasePolicy" : {
+    "@class" : "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+  }
+}

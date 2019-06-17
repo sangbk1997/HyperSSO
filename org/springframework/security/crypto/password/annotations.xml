@@ -1,0 +1,5 @@
+<root>
+    <item name='org.springframework.security.crypto.password.Digester'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>

@@ -1,0 +1,156 @@
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId": "testId",
+  "name": "testId",
+  "id": 1,
+  "accessStrategy": {
+    "@class": "org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy",
+    "enabled": true,
+    "requireAllAttributes": false,
+    "ssoEnabled": true,
+    "requiredAttributes": {
+      "@class": "java.util.HashMap",
+      "cn": [
+        "java.util.HashSet",
+        [
+          "admin",
+          "Admin",
+          "TheAdmin"
+        ]
+      ],
+      "member": [
+        "java.util.HashSet",
+        [
+          "admins",
+          "adminGroup",
+          "staff"
+        ]
+      ]
+    },
+    "rejectedAttributes": {
+      "@class": "java.util.HashMap",
+      "role": [
+        "java.util.HashSet",
+        [
+          "deny.+"
+        ]
+      ]
+    }
+  }
+}
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId": "https://app.example.org/.+",
+  "name": "ExampleApp",
+  "id": 1,
+  "requiredHandlers": [
+    "java.util.HashSet",
+    [
+      "DatabaseAuthenticationHandler"
+    ]
+  ]
+}
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId": "^https://.+",
+  "name": "sample service",
+  "id": 100,
+  "responseType": "HEADER"
+}
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId": "^https://.+",
+  "name": "sample service",
+  "id": 100,
+  "properties": {
+    "@class": "java.util.HashMap",
+    "email": {
+      "@class": "org.apereo.cas.services.DefaultRegisteredServiceProperty",
+      "values": [
+        "java.util.HashSet",
+        [
+          "person@place.edu",
+          "admin@place.edu"
+        ]
+      ]
+    }
+  }
+}
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId": "^https://.+",
+  "name": "sample service",
+  "id": 100,
+  "contacts": [
+    "java.util.ArrayList",
+    [
+      {
+        "@class": "org.apereo.cas.services.DefaultRegisteredServiceContact",
+        "name": "John Smith",
+        "email": "jsmith@example.org",
+        "phone": "123-456-7890",
+        "department": "IT"
+      }
+    ]
+  ]
+}
+
+{
+  "id": 1000,
+  "serviceId": "^(https|imaps)://.*",
+  "name": "GOOGLE",
+  "description": "Test service with ant-style pattern matching",
+  "allowedToProxy": true,
+  "enabled": true,
+  "ssoEnabled": true,
+  "anonymousAccess": false,
+  "evaluationOrder": 1,
+  "allowedAttributes": [
+    "uid",
+    "mail"
+  ]
+}
+
+{
+  "id" : 2000,
+  "@class" : "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "^http://sso.test.com:8080/*",
+  "name" : "CAS Spring Secured App",
+  "description": "This is a Spring App that usses the CAS Server for it's authentication",
+  "evaluationOrder" : 1
+}
+
+{
+  "id" : 3000,
+  "@class" : "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "^http://sso.test.com/*",
+  "name" : "CAS Spring Secured App",
+  "description": "This is a Spring App that usses the CAS Server for it's authentication",
+  "evaluationOrder" : 1
+}
+
+{
+  "id" : 4000,
+  "@class" : "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "^http://sso.test.com:8443/*",
+  "name" : "CAS Spring Secured App",
+  "description": "This is a Spring App that usses the CAS Server for it's authentication",
+  "evaluationOrder" : 1
+}
+
+{
+  "@class" : "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "http://sso.test.com:9000/",
+  "name" : "sample service",
+  "id" : 100,
+  "properties" : {
+    "@class" : "java.util.HashMap",
+    "wsfed.relyingPartyIdentifier" : {
+      "@class" : "org.apereo.cas.services.DefaultRegisteredServiceProperty",
+      "values" : [ "java.util.HashSet", [ "https://sso.test.com" ] ]
+    }
+  },
+  "attributeReleasePolicy" : {
+    "@class" : "org.jasig.cas.services.ReturnAllAttributeReleasePolicy"
+  }
+}

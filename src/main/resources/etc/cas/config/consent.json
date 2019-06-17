@@ -1,0 +1,10 @@
+{
+  "id": 1000,
+  "principal": "casuser",
+  "service": "https://google.com",
+  "createdDate": [ 2017, 7, 10, 14, 10, 17 ],
+  "options": "ATTRIBUTE_NAME",
+  "reminder": 14,
+  "reminderTimeUnit": "DAYS",
+  "attributes": "Base64"
+}

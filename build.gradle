@@ -33,6 +33,7 @@ project.ext."casWebApplicationBinaryName" = casWebApplicationBinaryName
 apply from: rootProject.file("gradle/waroverlay.gradle")
 apply from: rootProject.file("gradle/tasks.gradle")
 
+apply plugin: "java"
 apply plugin: "war"
 apply plugin: "org.springframework.boot"
 apply plugin: "eclipse"
@@ -42,6 +43,27 @@ apply plugin: "com.google.cloud.tools.jib"
 dependencies {
     compile "org.apereo.cas:cas-server-webapp${project.appServer}:${casServerVersion}"
     // Other CAS dependencies/modules may be listed here...
+    compile "org.apereo.cas:cas-server-support-json-service-registry:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-support-jdbc:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-support-jdbc-drivers:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-support-ldap:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-webapp-tomcat:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-support-pac4j-webflow:${project.'cas.version'}"
+    compile "org.springframework.security:spring-security-core:5.1.5.RELEASE"
+    compile "org.apereo.cas:cas-server-support-wsfederation-webflow:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-support-consent-webflow:${project.'cas.version'}"
+
+//    compile "org.apereo.cas:cas-server-support-sleuth:${project.'cas.version'}"
+//    compile "org.apereo.cas:cas-server-support-captcha:${project.'cas.version'}"
+    
+
+//    compile "org.springframework.security:spring-security-core:${project.'cas.version'}"
+
+
+//    compile "org.jasig.cas:cas-server-support-ldap:${project.'cas.version'}"
+//    compile group: 'org.apereo.cas', name: 'cas-server-support-ldap', version: '6.1.0-RC1'
+//    testCompile group: 'org.apereo.cas', name: 'cas-server-support-ldap', version: '6.0.3'
+
 }
 
 tasks.findByName("jibDockerBuild")

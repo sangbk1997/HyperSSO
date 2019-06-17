@@ -1,0 +1,11 @@
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "id": 8000,
+  "serviceId": "http://sso.hyper.com:80/*",
+  "name": "Hyperlogy SSO",
+  "description": "Hyperlogy Corporation is IT Solutions for Business & Public Sector in Viet Nam",
+  "anonymousAccess":false,
+  "attributeReleasePolicy" : {
+    "@class" : "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+  }
+}

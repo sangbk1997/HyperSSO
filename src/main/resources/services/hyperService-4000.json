@@ -1,0 +1,12 @@
+{
+  "id" : 4000,
+  "@class" : "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "^http://sso.hyper.com:8443/*",
+  "name" : "CAS Spring Secured App",
+  "description": "This is a Spring App that usses the CAS Server for it's authentication",
+  "evaluationOrder" : 1,
+  "anonymousAccess":false,
+  "attributeReleasePolicy" : {
+    "@class" : "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+  }
+}

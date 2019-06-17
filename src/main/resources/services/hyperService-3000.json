@@ -1,0 +1,11 @@
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "id": 3000,
+  "serviceId": "http://chat.hyper.com:3000/protected/index",
+  "name": "Hyperlogy SSO",
+  "description": "Hyperlogy Corporation is IT Solutions for Business & Public Sector in Viet Nam",
+  "anonymousAccess": false,
+  "attributeReleasePolicy": {
+    "@class": "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+  }
+}
