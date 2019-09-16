@@ -1,11 +1,13 @@
 {
   "@class": "org.apereo.cas.services.RegexRegisteredService",
   "id": 5000,
-  "serviceId": "http://sso.test.com:9000/*",
+  "serviceId": "http://chat.hyper.com:9000/*",
   "name": "Hyperlogy SSO",
   "description": "Hyperlogy Corporation is IT Solutions for Business & Public Sector in Viet Nam",
   "anonymousAccess":false,
   "attributeReleasePolicy" : {
     "@class" : "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
-  }
+  },
+  "requiredHandlers" : [ "java.util.HashSet", [ "HyperCustomeHandler" ] ]
+
 }

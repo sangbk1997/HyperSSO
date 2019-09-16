@@ -58,7 +58,7 @@
         <AsyncLogger name="org.apereo.spring" level="debug" includeLocation="true"/>
 
         <AsyncLogger name="org.apache" level="warn"/>
-        <AsyncLogger name="org.apache.http" level="error"/>
+        <AsyncLogger name="org.apache.http" level="info"/>
 
         <AsyncLogger name="org.springframework.boot" level="${sys:spring.boot.log.level" includeLocation="true"/>
         <AsyncLogger name="org.springframework.boot.context.embedded" level="debug" includeLocation="true"/>
@@ -79,7 +79,7 @@
         <AsyncLogger name="org.springframework.security" level="debug"
                      includeLocation="true"/>
         <AsyncLogger name="org.springframework.cloud" level="${sys:spring.cloud.log.level}" includeLocation="true"/>
-        <AsyncLogger name="org.springframework.amqp" level="error"/>
+        <AsyncLogger name="org.springframework.amqp" level="info"/>
         <AsyncLogger name="org.springframework.integration" level="warn" includeLocation="true"/>
         <AsyncLogger name="org.springframework.messaging" level="debug" includeLocation="true"/>
         <AsyncLogger name="org.springframework.web" level="debug" includeLocation="true"/>

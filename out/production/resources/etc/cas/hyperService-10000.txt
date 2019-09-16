@@ -114,7 +114,7 @@
 {
   "id" : 2000,
   "@class" : "org.apereo.cas.services.RegexRegisteredService",
-  "serviceId" : "^http://sso.test.com:8080/*",
+  "serviceId" : "^http://sso.hyper.com:8080/*",
   "name" : "CAS Spring Secured App",
   "description": "This is a Spring App that usses the CAS Server for it's authentication",
   "evaluationOrder" : 1
@@ -123,7 +123,7 @@
 {
   "id" : 3000,
   "@class" : "org.apereo.cas.services.RegexRegisteredService",
-  "serviceId" : "^http://sso.test.com/*",
+  "serviceId" : "^http://sso.hyper.com/*",
   "name" : "CAS Spring Secured App",
   "description": "This is a Spring App that usses the CAS Server for it's authentication",
   "evaluationOrder" : 1
@@ -132,7 +132,7 @@
 {
   "id" : 4000,
   "@class" : "org.apereo.cas.services.RegexRegisteredService",
-  "serviceId" : "^http://sso.test.com:8443/*",
+  "serviceId" : "^http://sso.hyper.com:8443/*",
   "name" : "CAS Spring Secured App",
   "description": "This is a Spring App that usses the CAS Server for it's authentication",
   "evaluationOrder" : 1
@@ -140,14 +140,14 @@
 
 {
   "@class" : "org.apereo.cas.services.RegexRegisteredService",
-  "serviceId" : "http://sso.test.com:9000/",
+  "serviceId" : "http://sso.hyper.com:9000/",
   "name" : "sample service",
   "id" : 100,
   "properties" : {
     "@class" : "java.util.HashMap",
     "wsfed.relyingPartyIdentifier" : {
       "@class" : "org.apereo.cas.services.DefaultRegisteredServiceProperty",
-      "values" : [ "java.util.HashSet", [ "https://sso.test.com" ] ]
+      "values" : [ "java.util.HashSet", [ "https://sso.hyper.com" ] ]
     }
   },
   "attributeReleasePolicy" : {

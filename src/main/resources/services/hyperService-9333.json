@@ -1,7 +1,7 @@
 {
   "@class": "org.apereo.cas.services.RegexRegisteredService",
-  "id": 9797,
-  "serviceId": "http://sso.client.com:9797/login/cas",
+  "id": 9333,
+  "serviceId": "https://sangnb.ihcm.vn/ihcm/",
   "name": "Hyperlogy SSO",
   "description": "Hyperlogy Corporation is IT Solutions for Business & Public Sector in Viet Nam",
   "anonymousAccess": false,
@@ -9,9 +9,9 @@
     "@class": "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
   },
   "logoutType": "BACK_CHANNEL",
-  "logoutUrl": "http://sso.client.com:9797/logout/cas",
   "proxyPolicy": {
     "@class": "org.apereo.cas.services.RegexMatchingRegisteredServiceProxyPolicy",
-    "pattern" : "^https?://.*"
+    "pattern": "^https?://.*"
   }
 }
+

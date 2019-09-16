@@ -45,17 +45,25 @@ dependencies {
     // Other CAS dependencies/modules may be listed here...
     compile "org.apereo.cas:cas-server-support-json-service-registry:${project.'cas.version'}"
     compile "org.apereo.cas:cas-server-support-jdbc:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-support-saml:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-support-jdbc-authentication:${project.'cas.version'}"
     compile "org.apereo.cas:cas-server-support-jdbc-drivers:${project.'cas.version'}"
     compile "org.apereo.cas:cas-server-support-ldap:${project.'cas.version'}"
     compile "org.apereo.cas:cas-server-webapp-tomcat:${project.'cas.version'}"
     compile "org.apereo.cas:cas-server-support-pac4j-webflow:${project.'cas.version'}"
-    compile "org.springframework.security:spring-security-core:5.1.5.RELEASE"
+    compile "org.springframework.security:spring-security-core:4.2.1.RELEASE"
     compile "org.apereo.cas:cas-server-support-wsfederation-webflow:${project.'cas.version'}"
     compile "org.apereo.cas:cas-server-support-consent-webflow:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-core-authentication-api:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-core-web-api:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-core-api-configuration-model:${project.'cas.version'}"
+    compile "org.apache.shiro:shiro-core:1.4.0"
+//    compile "org.projectlombok:lombok:1.18.4"
+
 
 //    compile "org.apereo.cas:cas-server-support-sleuth:${project.'cas.version'}"
 //    compile "org.apereo.cas:cas-server-support-captcha:${project.'cas.version'}"
-    
+
 
 //    compile "org.springframework.security:spring-security-core:${project.'cas.version'}"
 
@@ -67,8 +75,8 @@ dependencies {
 }
 
 tasks.findByName("jibDockerBuild")
-    .dependsOn(copyWebAppIntoJib, copyConfigIntoJib)
-    .finalizedBy(deleteWebAppFromJib)
+        .dependsOn(copyWebAppIntoJib, copyConfigIntoJib)
+        .finalizedBy(deleteWebAppFromJib)
 
 configurations.all {
     resolutionStrategy {
@@ -86,8 +94,8 @@ configurations.all {
 
 eclipse {
     classpath {
-       downloadSources = true
-       downloadJavadoc = true
+        downloadSources = true
+        downloadJavadoc = true
     }
 }
 
@@ -151,23 +159,20 @@ jib {
          */
         credHelper = "osxkeychain"
         /**
-        auth {
-            username = "*******"
-            password = "*******"
-        }
-        tags = [casServerVersion]
-        */
+         auth {username = "*******"
+         password = "*******"}tags = [casServerVersion]
+         */
     }
     container {
         useCurrentTimestamp = true
         entrypoint = ['docker/entrypoint.sh']
         ports = ['80', '443', '8080', '8443']
-        labels = [version:casServerVersion, name:project.name, group:project.group]
+        labels = [version: casServerVersion, name: project.name, group: project.group]
     }
     extraDirectory {
         path = file('src/main/jib')
         permissions = [
-            '/docker/entrypoint.sh': '755'
+                '/docker/entrypoint.sh': '755'
         ]
     }
 }
