@@ -7,5 +7,18 @@
   "anonymousAccess": false,
   "attributeReleasePolicy": {
     "@class": "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
-  }
+  },
+  "properties": {
+    "@class": "java.util.HashMap",
+    "wsfed.relyingPartyIdentifier": {
+      "@class": "org.apereo.cas.services.DefaultRegisteredServiceProperty",
+      "values": [
+        "java.util.HashSet",
+        [
+          "https://hyper.adfs.com"
+        ]
+      ]
+    }
+  },
+  "logoutType": "NONE"
 }

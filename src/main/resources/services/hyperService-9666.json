@@ -1,17 +1,13 @@
 {
   "@class": "org.apereo.cas.services.RegexRegisteredService",
-  "id": 5000,
-  "serviceId": "http://chat.hyper.com:9000/",
+  "id": 9666,
+  "serviceId": "https://xuka.ihcm.vn/ihcm/",
   "name": "Hyperlogy SSO",
   "description": "Hyperlogy Corporation is IT Solutions for Business & Public Sector in Viet Nam",
   "anonymousAccess": false,
   "attributeReleasePolicy": {
     "@class": "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
   },
-  "logoutType": "BACK_CHANNEL",
-  "proxyPolicy": {
-    "@class": "org.apereo.cas.services.RegexMatchingRegisteredServiceProxyPolicy",
-    "pattern": "^http?://.*"
-  }
+  "logoutType": "BACK_CHANNEL"
 }
 

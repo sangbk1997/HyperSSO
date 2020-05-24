@@ -20,9 +20,5 @@
       ]
     }
   },
-  "logoutType": "NONE",
-  "proxyPolicy": {
-    "@class": "org.apereo.cas.services.RegexMatchingRegisteredServiceProxyPolicy",
-    "pattern": "^https?://.*"
-  }
+  "logoutType": "NONE"
 }

@@ -1,7 +1,7 @@
 {
   "@class": "org.apereo.cas.services.RegexRegisteredService",
-  "id": 5000,
-  "serviceId": "http://chat.hyper.com:9000/",
+  "id": 9888,
+  "serviceId": "https://chat.hyper.com:9999/",
   "name": "Hyperlogy SSO",
   "description": "Hyperlogy Corporation is IT Solutions for Business & Public Sector in Viet Nam",
   "anonymousAccess": false,
@@ -11,7 +11,7 @@
   "logoutType": "BACK_CHANNEL",
   "proxyPolicy": {
     "@class": "org.apereo.cas.services.RegexMatchingRegisteredServiceProxyPolicy",
-    "pattern": "^http?://.*"
+    "pattern": "^https?://.*"
   }
 }
 
